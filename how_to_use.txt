@@ -1,0 +1,39 @@
+or addData a new repository on the command line
+echo "# server_ts_131223" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin https://github.com/OlegGrn/server_ts_131223.git
+  git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/OlegGrn/server_ts_131223.git
+  git branch -M main
+  git push -u origin main
+
+  C:\#React\shop_081123_ts\server_ts_131223
+
+
+  npm install --save express
+  npm install @neondatabase/serverless     // дле неон сервера
+
+  npm install --save sequelize
+  npm install --save pg pg-hstore  // for Postgres
+
+  npm install reflect-metadata  // опционально для sequelize-typescript
+  npm install --save-dev @types/node @types/validator // опционально для sequelize-typescript
+  npm install sequelize-typescript // опционально для sequelize-typescript
+
+  npm install cors
+  npm install dotenv
+  npm install -D nodemon
+  npm install cookie-parser // const cookieParser = require('cookie-parser')
+
+  npm install bcrypt jsonwebtoken
+  npm install uuid
+  npm install cookie-parser
+  npm install express-validator
+  npm install nodemailer
+
+  npm install express-fileupload ///
+
