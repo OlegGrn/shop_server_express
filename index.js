@@ -38,17 +38,26 @@ app.use(errorHandler)
 const start = async () => {
     try {
         await sequelize.authenticate();
+
+        //удаление всех таблиц
+        //await sequelize.drop()
+
+        //для первой инициализации таблиц в БД
         //await sequelize.sync();
+
         //await models.GeneralBasket.sync({alter: true})
+
         app.listen(PORT)
         return "Start server on PORT = " + PORT
     } catch (e) {
         console.log(e)
         return e.message
     }
-
 }
 start().then(e => console.log(e));
+
+
+
 
 
 

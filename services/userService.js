@@ -50,15 +50,21 @@ class UserService {
             .create({email, password: hashPassword, checkedLink: ud})
             .then(async user => {
                 const nameUser = USER
-                //const nameUser = ADMIN
+
+                //для первой регистрации админа в базе
+                //const nameAdmin = ADMIN
+
                 payload = {id: user.id, email, roles: [nameUser]}
                 let promise = await Promise.all([
                     TokenService.madeTokens(payload),
                     Role.create({
                         id_user: user.id,
                         name: nameUser
+                        //name: nameAdmin // для первой регистрации
                     }),
-                    Basket.create({id_user: user.id}), // либо здесь почтовый клиент
+                    //здесь promise для почтового клиента.
+
+                    //Basket.create({id_user: user.id}), // этой таблицы уже нет
                 ])
                 return promise[0] //возвращаем пару токенов
             })
