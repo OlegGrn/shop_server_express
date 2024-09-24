@@ -28,7 +28,6 @@ class BaseController{
     }
 
 
-
     async deleteData(req, res, next) {
         try {
             const id = req.body.id

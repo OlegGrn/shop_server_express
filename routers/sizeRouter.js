@@ -6,7 +6,7 @@ const checkPowers = require("../middlewares/checkPowers");
 
 const ADMIN = process.env.ADMIN || 'ADMIN'
 
-router.post('/delete', checkPowers([ADMIN]), SizeController.deleteData.bind(SizeController))
+router.delete('/', checkPowers([ADMIN]), SizeController.deleteData.bind(SizeController))
 router.post('/', checkPowers([ADMIN]),  SizeController.addData.bind(SizeController))
 router.get('/', SizeController.getData.bind(SizeController))
 router.get('/unique', SizeController.getUnique.bind(SizeController))
