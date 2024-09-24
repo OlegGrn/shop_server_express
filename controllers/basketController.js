@@ -15,7 +15,6 @@ class BasketController {
 
     async deleteData(req, res, next) {
         try {
-            console.log(req.body)
             await BasketService.deleteData(req.body)
             return res.status(200).json({message: "delete Ok"})
 
